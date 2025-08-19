@@ -1,0 +1,137 @@
+1.Write Java programs MyMath.java , MyMathDemo.java  to check given methods.
+  com.verizon.util
+        Class Name: MyMath  ( Utility classes)
+
+	Methods:  
+	1. public static boolean isPerfectNumber(int n);
+		a perfect number is a positive integer that is equal to the sum of its positive divisors, 
+                excluding the number itself.
+		all its factors except the number itself, returns true if the given
+		number is a perfect number else returns false		
+	2. public static long factorial(int n);
+		returns factorial of the given number
+
+   com.verizon.ui
+		Tester Class Name: MyMathDemo
+			Test the methods of MyMath class
+
+TestCases:
+Input:  6
+            True
+
+            28
+            True
+
+
+2. Find sum of first given number of Fibonacci digits.
+
+package com.verizon;
+import java.util.*;
+public class SumOfFibonacci {
+	public static int sumOfFibonacci(int n){
+		 // implement 
+		return d;
+	}
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		System.out.println(sumOfFibonacci(n));
+	}
+}
+
+TestCase:
+input   :3
+logic    :1+1+2
+output:4
+
+3.Create Person.java and InvalidAdharException.java
+
+Create a class Person with following data members
+	Long adharCard,  
+	String  name,  
+	String address, 
+	String email , 
+	Long mobile
+
+	Note: use wrapper class types rather than primitive types
+
+	All the persons stay in a colony named, "Verizon Colony", declare 
+	a static data member named,  colonyName
+	
+	provide default constructor
+	provide 1-arg constructor that receives adharCard number 
+        provide all-arg constructor	
+	provide getter and setter methods for all the data members
+	provide String representation of the class
+
+Create  InvalidAdharException.java and throw this exception if adhar number is read from main method if it is not 12 digits.
+
+
+4. Write below java classes to display list of  Carnames and Highest price of Car.
+		1.public List<String> getCarNames(List<Car> carList);
+      	        2.public double getHighPricedCar(List<Car> carList);
+ 
+-com.verizon.model
+------------------------------------------
+public class Car {
+	private String careMake; //ex. Maruti 
+	private String carName; // ex.Swift Dezire
+	private double price;  // ex. 8120000.0
+	
+	public Car() {
+		
+	}
+}
+
+com.verizon.service
+----------------------------------------------------------------
+public interface CarService{
+	
+	public List<String> getCarNames(List<Car> carList);
+	
+	public double getHighPricedCar(List<Car> carList);
+	
+}
+
+//Implement the above interface using Stream API in com.verizon.service
+
+public class CarService implements CarServiceImpl{
+	
+	public List<String> getCarNames(List<Car> carList){
+	}
+	public double getHighPricedCar(List<Car> carList){
+	}
+	
+}
+
+
+--------------------------------------------------------
+com.verizon.ui
+public class CarApp{
+	public static void main(String[] args){
+		Car cars[]= {
+						new Car("Maruti","Swift Dezire",810000.00),
+						new Car("Hyundai","Verna",1100000.00),
+						new Car("Toyota","Innova",2450000.00),
+						new Car("Audi","Q3",4500000.00)
+				
+					};
+		List<Car> carList = new ArrayList<>(Arrays.asList(cars));
+		try {
+			//TODO
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+TestCase:
+
+ Maruti
+ Hyundai
+ Toyota
+ Audi
+
+4500000.00
+
